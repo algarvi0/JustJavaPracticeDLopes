@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="horizontal">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_horizontal_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            tools:context=".MainActivity">
+            <!-- Quantity Label TEXT VIEW-->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/material_blue_300"
+                android:text="@string/order_your_coffee"
+                android:textAlignment="center"
+                android:textAppearance="?android:textAppearanceLarge" />
+
+            <!-- + button-->
+
+            <TextView
+                android:id="@+id/id_instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:text="@string/instructions"
+                android:textAlignment="center"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/quantity"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/material_light_black"
+                android:textSize="@dimen/text_size_xnormal"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_minus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="decrement"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/quantity_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/material_light_black"
+                    android:textSize="@dimen/text_size_xnormal"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/button_plus"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:onClick="increment"
+                    android:text="@string/button_plus" />
+
+            </LinearLayout>
+
+            <!-- Quantity Value TEXT VIEW-->
+            <!-- + button-->
+            <!-- Price Label TEXT VIEW-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="@string/string_price"
+                    android:textAllCaps="true"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/material_light_black"
+                    android:textSize="@dimen/text_size_xnormal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/price_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="0"
+                    android:textAlignment="textStart"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/material_light_black"
+                    android:textSize="@dimen/text_size_xnormal"
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:onClick="submitOrder"
+                android:text="Order" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
