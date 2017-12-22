@@ -6,10 +6,12 @@
  * in the project's AndroidManifest.xml file.
  **/
 package com.davidlopes.justjavapracticedlopes;
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * This app displays an order form to order coffee.
@@ -65,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
         displayMessage(priceMessage);
 
     }
-
     /**
      * This method displays the given quantity value on the screen.
      */
@@ -73,13 +74,12 @@ public class MainActivity extends AppCompatActivity {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + number);
     }
-
     /**
      * Calculates the price of the order.
      * @priceOrder returns price of the order.
      */
     private int calculatePrice() {
-        return = quantity * pricePerCup;
+        return quantity * pricePerCup;
     }
 
     
@@ -98,11 +98,12 @@ public class MainActivity extends AppCompatActivity {
     *
     */
     public String createOrderSumary(int price) {
-        String priceMessage = "David Lopes \n";
+        String priceMessage = "David Lopes";
         priceMessage += "\nQuantity: " + quantity;
         priceMessage += "\nTotal: € " + quantity * pricePerCup;
         priceMessage += "\nThank You !";
         displayMessage(priceMessage);
+        Toast.makeText(getApplicationContext(), priceMessage , Toast.LENGTH_LONG).show();
         return priceMessage;
     }
 }
