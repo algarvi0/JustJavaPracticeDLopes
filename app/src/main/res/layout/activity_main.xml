@@ -33,7 +33,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/material_blue_300"
-                    android:text="Toppings"
+                    android:text="@string/toppings"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textAppearance="?android:textAppearanceLarge"/>
@@ -43,7 +43,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="24dp"
-                    android:text="Whipped Cream"
+                    android:text="@string/whipped_cream"
                     android:textAllCaps="true"
                     android:textAppearance="?android:textAppearanceMedium"
                     android:textSize="16sp" />
@@ -53,7 +53,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="24dp"
-                    android:text="Chocolate"
+                    android:text="@string/chocolate"
                     android:textAllCaps="true"
                     android:textSize="16sp" />
                 <!-- Quantity Label TEXT VIEW-->
@@ -116,7 +116,7 @@
                         android:gravity="center_vertical|end"
                         android:paddingLeft="16dp"
                         android:paddingRight="16dp"
-                        android:text="0"
+                        android:text="1"
                         android:textAlignment="center"
                         android:textAppearance="?android:textAppearanceLarge"
                         android:textColor="@color/material_light_black"
