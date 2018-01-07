@@ -1,13 +1,13 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
-    <string name="app_name">Justjava</string>
+    <string name="app_name">JustJavaPracticeDLopes</string>
     <!-- CÓDIGO DE DLOPES-->
     <string name="order_your_coffee">Order Your Coffee</string>
-    <string name="string_price">Price</string>
+    <string name="string_price">order summary</string>
     <string name="button_order">Order</string>
     <string name="button_minus">-</string>
     <string name="button_plus">+</string>
     <string name="instructions">Press - to decrease or + to increase then press ORDER.\n Price will automaticaly updated !"</string>
+    <string name="less_then_zero">Less then Zero not allowed !</string>
 
     <!-- Copyright (C) 2015 The Android Open Source Project
          Licensed under the Apache License, Version 2.0 (the "License");
