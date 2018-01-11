@@ -12,9 +12,9 @@
   limitations under the License.
 -->
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <color name="colorPrimary">#1976d2</color>
+    <color name="colorPrimary">#2196F3</color>
     <color name="colorPrimaryDark">#1976D2</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#448AFF</color>
 
     <!-- https://www.google.com/design/spec/style/color.html#color-color-palette -->
     <!-- https://developer.android.com/reference/android/support/design/R.color.html -->
