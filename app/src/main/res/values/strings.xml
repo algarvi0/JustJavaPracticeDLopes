@@ -28,7 +28,7 @@
       Whipped cream topping for the order summary. It will be shown in the format of
       "Add whipped cream? true" or "Add whipped cream? false". [CHAR LIMIT=NONE]
     -->
-    <string name="order_summary_whipped_cream">Wdavid hipped cream? <xliff:g id="stringAddChocolate" example="true">%s</xliff:g></string>
+    <string name="order_summary_whipped_cream">Whipped cream? <xliff:g id="stringAddChocolate" example="true">%s</xliff:g></string>
 
     <!--
       Chocolate topping for the order summary. It will be shown in the format of

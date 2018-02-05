@@ -1,5 +1,7 @@
 package com.davidlopes.justjavapracticedlopes;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -94,13 +96,8 @@ public class MainActivity extends AppCompatActivity {
 		
 		String priceMessage = createOrderSumary(name, price, hasWhippedCream, hasChocolate);
 		displayMessage(priceMessage);
-		//				Intent emailIntent = new Intent(Intent.ACTION_SEND);//Use an intent to launch an
-		//				emailIntent.setData(Uri.parse("mailto:")); // only email apps should handle this
-		//				emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.order_summary_email_subject) + name);
-		//				emailIntent.putExtra(Intent.EXTRA_TEXT, priceMessage);
-		//				if (emailIntent.resolveActivity(getPackageManager()) != null) {
-		//					startActivity(emailIntent);
-		//          	}
+		
+		
 	}
 	
 	/**
