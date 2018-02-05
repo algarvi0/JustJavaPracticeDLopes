@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
+        <dimen name="default_margin">16dp</dimen>
+        <dimen name="default_padding">8dp</dimen>
+        <dimen name="default_padding_small">5dp</dimen>
+        <dimen name="text_size">25sp</dimen>
+        <dimen name="top_bottom_margin">32dp</dimen>
+        <dimen name="AnswerFontSize">18sp</dimen>
+        <dimen name="EditTextSize">16sp</dimen>
+        <dimen name="image_height250">250dp</dimen>
+        <dimen name="image_height300">300dp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
@@ -204,4 +214,3 @@
         <!-- Toolbars -->
         <!-- Tooltips -->
     </resources>
-

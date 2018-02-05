@@ -1,12 +1,33 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="EditText">
+        <item name="android:textSize">@dimen/EditTextSize</item>
+        <item name="android:layout_marginLeft">@dimen/default_margin</item>
+        <item name="android:layout_marginBottom">@dimen/default_margin</item>
+        <item name="android:layout_marginRight">@dimen/default_margin</item>
+        <item name="android:paddingRight">@dimen/default_padding</item>
+        <item name="android:paddingLeft">@dimen/default_padding</item>
+        <item name="android:paddingBottom">@dimen/default_padding</item>
 
     </style>
 
+    <style name="SeparatorStyle">
+        <item name="android:layout_marginBottom">@dimen/default_margin</item>
+        <item name="android:paddingTop">@dimen/default_padding</item>
+        <item name="android:paddingBottom">@dimen/default_padding</item>
+        <item name="android:paddingRight">@dimen/default_padding</item>
+        <item name="android:paddingLeft">@dimen/default_padding</item>
+        <item name="android:background">@color/material_brown_500</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:gravity">start</item>
+    </style>
 </resources>

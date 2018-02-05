@@ -9,6 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/material_brown_100"
         android:orientation="vertical"
         android:paddingBottom="@dimen/activity_horizontal_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -16,51 +17,74 @@
         android:paddingTop="@dimen/activity_horizontal_margin"
         tools:context=".MainActivity">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/logo_dlopes_cafe" />
+
         <EditText
             android:id="@+id/name_field"
+            style="@style/EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="@dimen/margin_padding_normal"
+            android:background="@color/material_brown_100"
             android:hint="@string/insert_your_name"
+            android:imeOptions="actionDone"
             android:inputType="textCapWords" />
         <!-- Quantity Label TEXT VIEW-->
         <TextView
             android:id="@+id/toppings"
+            style="@style/SeparatorStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/material_brown_500"
+            android:layout_weight="1"
             android:text="@string/toppings"
             android:textAlignment="center"
-            android:textAllCaps="true"
-            android:textAppearance="?android:textAppearanceLarge" />
+            android:textAllCaps="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/whipped_cream_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/margin_padding_xxnormal"
+                android:paddingRight="@dimen/margin_padding_xxnormal"
+                android:text="@string/whipped_cream"
+                android:textAllCaps="true"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/chocolate_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:text="@string/chocolate"
+                android:textAllCaps="true"
+                android:textSize="16sp" />
+        </LinearLayout>
+
         <!-- Whipped Cream check Box-->
-        <CheckBox
-            android:id="@+id/whipped_cream_checkbox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:paddingRight="24dp"
-            android:text="@string/whipped_cream"
-            android:textAllCaps="true"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textSize="16sp" />
         <!-- Chocolate check Box-->
-        <CheckBox
-            android:id="@+id/chocolate_checkbox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:paddingRight="24dp"
-            android:text="@string/chocolate"
-            android:textAllCaps="true"
-            android:textSize="16sp" />
         <!-- Quantity Label TEXT VIEW-->
         <TextView
             android:id="@+id/title"
+            style="@style/SeparatorStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="@dimen/margin_padding_xxnormal"
             android:background="@color/material_brown_500"
+            android:paddingLeft="@dimen/margin_padding_xxnormal"
+            android:paddingRight="@dimen/margin_padding_xxnormal"
             android:text="@string/order_your_coffee"
             android:textAlignment="center"
             android:textAllCaps="true"
@@ -72,26 +96,25 @@
             android:id="@+id/id_instructions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="16dp"
+            android:paddingTop="@dimen/margin_padding_xtiny"
             android:text="@string/instructions"
             android:textAlignment="center"
             android:textAppearance="?android:textAppearanceLarge"
             android:textSize="@dimen/text_size_small" />
 
         <TextView
+            style="@style/SeparatorStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:layout_marginTop="16dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
+            android:background="@color/material_brown_500"
+            android:paddingLeft="@dimen/margin_padding_xsmall"
+            android:paddingRight="@dimen/margin_padding_xsmall"
             android:text="@string/quantity"
             android:textAlignment="center"
             android:textAllCaps="true"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:textColor="@color/material_light_black"
-            android:textSize="@dimen/text_size_xnormal"
-            android:textStyle="bold" />
+            android:textAppearance="?android:textAppearanceLarge" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -103,6 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@color/material_brown_500"
                 android:onClick="decrement"
                 android:text="@string/minus" />
 
@@ -126,6 +150,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_weight="1"
+                android:background="@color/material_brown_500"
                 android:onClick="incrementQuantity"
                 android:text="@string/button_plus" />
 
@@ -145,9 +170,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="16dp"
-                android:paddingBottom="16dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
+                android:paddingBottom="@dimen/margin_padding_xsmall"
+                android:paddingLeft="@dimen/margin_padding_xsmall"
+                android:paddingRight="@dimen/margin_padding_xsmall"
                 android:text="@string/string_price"
                 android:textAllCaps="true"
                 android:textAppearance="?android:textAppearanceLarge"
@@ -178,6 +203,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
+            android:background="@color/material_brown_500"
             android:onClick="submitOrder"
             android:text="@string/order" />
     </LinearLayout>
