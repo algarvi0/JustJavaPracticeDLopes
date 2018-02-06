@@ -16,13 +16,14 @@
     <string name="initial_quantity_value" translatable="false">2</string>
     <string name="maximum_coffes">You can order maximum of 100 coffees!</string>
 
-    <string name="name_error">Please type your Name</string>
+    <string name="name_error">Please type your Name !!!</string>
     <string name="IntegralEmailAddress" translatable="false">algarvi0@gmail.com</string>
     <!--
       Name for the order summary. It will be shown in the format of "Name: Amy" where Amy is the
       user's name. [CHAR LIMIT=NONE]
     -->
     <string name="order_summary_name">Name: <xliff:g id="name" example="Amy">%s</xliff:g></string>
+    <string name="logo">Logo</string>
 
     <!--
       Whipped cream topping for the order summary. It will be shown in the format of
@@ -56,6 +57,8 @@
       "Just Java order for Amy" where Amy is the user's name. [CHAR LIMIT=NONE]
     -->
     <string name="order_summary_email_subject">Just Java order for <xliff:g id="name" example="Amy">%s</xliff:g></string>
+    <string name="send_mail_using">Send email using…</string>
+    <string name="no_mail_clients">No email clients installed !</string>
     <string name="insert_your_name">Type your name</string>
     <string name="_1">1</string>
     <string name="order">Order</string>
@@ -66,4 +69,7 @@
     <string name="yes">Yes</string>
 
 
+    mail_subject
+
 </resources>
+

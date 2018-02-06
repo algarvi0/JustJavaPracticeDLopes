@@ -1,8 +1,9 @@
 package com.davidlopes.justjavapracticedlopes;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -17,10 +18,16 @@ import java.text.NumberFormat;
 public class MainActivity extends AppCompatActivity {
 	int quantity = 1;
 	
+	EditText nameField;
+	// --Commented out by Inspection (06/02/2018 12:21):Editable nameEditable;
+	String name;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		// Get user's name
+		
 	}
 	
 	@Override
@@ -32,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
 	protected void onRestoreInstanceState(Bundle savedState) {
 		super.onRestoreInstanceState(savedState);
 	}
-	
 	/**
 	 * This method is called when the plus button is clicked.
 	 */
@@ -46,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
 		quantity = quantity + 1;
 		displayQuantity(quantity);
 	}
-	
 	/**
 	 * This method is called when the minus button is clicked.
 	 */
@@ -60,19 +65,13 @@ public class MainActivity extends AppCompatActivity {
 		quantity = quantity - 1;
 		displayQuantity(quantity);
 	}
-	
 	/**
 	 * This method is called when the order button is clicked.
 	 */
 	public void submitOrder(View view) {
 		//Log.i("MainActivity - ", String.valueOf(price));
-		
-		// Get user's name
-		EditText nameField = findViewById(R.id.name_field);
-		Editable nameEditable = nameField.getText();
-		String name = nameEditable.toString();
+
 		//Log.v("MainActivity - ", "Name ? - " + name);
-		
 		// Figure out if the user wants Whipped Cream topping
 		CheckBox whippedCreamCheckBox = findViewById(R.id.whipped_cream_checkbox);
 		boolean hasWhippedCream = whippedCreamCheckBox.isChecked();
@@ -87,17 +86,36 @@ public class MainActivity extends AppCompatActivity {
 		int price = calculatePrice(hasWhippedCream, hasChocolate);
 		
 		// This line of code prevents user from submitting an empty name field for the order.
-		if (nameField.getText().toString().trim().length() < 2) {
+		
+		nameField = findViewById(R.id.name_field);
+		name = nameField.getText().toString();
+		
+		if (name.trim().length() < 2) {
 			Toast.makeText(this, getString(R.string.name_error), Toast.LENGTH_SHORT).show();
 			return;
 		}
-		
 		String priceMessage = createOrderSumary(name, price, hasWhippedCream, hasChocolate);
 		displayMessage(priceMessage);
-		
-		
+		String mail = "algarvi0@gmail.com";
+		String mailSubject = getString((R.string.order_summary_name), name);
+		composeEmail(mail, mailSubject, priceMessage);
 	}
 	
+	public void composeEmail(String addresses, String subject, String request) {
+		Intent intent = new Intent(Intent.ACTION_SENDTO);
+		intent.setData(Uri.parse("mailto:" + addresses));
+		intent.putExtra(Intent.EXTRA_EMAIL, addresses);
+		intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+		intent.putExtra(Intent.EXTRA_TEXT, request);
+		if (intent.resolveActivity(getPackageManager()) != null) {
+			startActivity(intent);
+			try {
+				startActivity(Intent.createChooser(intent, getString(R.string.send_mail_using)));
+			} catch (android.content.ActivityNotFoundException ex) {
+				Toast.makeText(this, getString(R.string.no_mail_clients), Toast.LENGTH_LONG).show();
+			}
+		}
+	}
 	/**
 	 * This method displays the given quantity value on the screen.
 	 */
@@ -105,7 +123,6 @@ public class MainActivity extends AppCompatActivity {
 		TextView quantityTextView = findViewById(R.id.quantity_text_view);
 		quantityTextView.setText(String.valueOf(numberOfCoffees));
 	}
-	
 	/**
 	 * Calculates the price of the order.
 	 *

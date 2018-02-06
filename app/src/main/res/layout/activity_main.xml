@@ -21,6 +21,7 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:contentDescription="@string/logo"
             app:srcCompat="@drawable/logo_dlopes_cafe" />
 
         <EditText
@@ -81,10 +82,7 @@
             style="@style/SeparatorStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_padding_xxnormal"
             android:background="@color/material_brown_500"
-            android:paddingLeft="@dimen/margin_padding_xxnormal"
-            android:paddingRight="@dimen/margin_padding_xxnormal"
             android:text="@string/order_your_coffee"
             android:textAlignment="center"
             android:textAllCaps="true"
@@ -106,8 +104,8 @@
             style="@style/SeparatorStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="9dp"
+            android:layout_marginTop="8dp"
             android:background="@color/material_brown_500"
             android:paddingLeft="@dimen/margin_padding_xsmall"
             android:paddingRight="@dimen/margin_padding_xsmall"
@@ -124,11 +122,12 @@
             <Button
                 android:id="@+id/button_minus"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="36dp"
                 android:layout_weight="1"
                 android:background="@color/material_brown_500"
                 android:onClick="decrement"
-                android:text="@string/minus" />
+                android:text="@string/minus"
+                android:textColor="@color/material_light_white" />
 
             <TextView
                 android:id="@+id/quantity_text_view"
@@ -148,11 +147,12 @@
             <Button
                 android:id="@+id/button_plus"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="36dp"
                 android:layout_weight="1"
                 android:background="@color/material_brown_500"
                 android:onClick="incrementQuantity"
-                android:text="@string/button_plus" />
+                android:text="@string/button_plus"
+                android:textColor="@color/material_light_white" />
 
         </LinearLayout>
 
@@ -184,7 +184,6 @@
                 android:id="@+id/order_summary_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_weight="1"
                 android:gravity="start"
                 android:paddingBottom="16dp"
                 android:paddingLeft="16dp"
@@ -205,7 +204,8 @@
             android:layout_weight="1"
             android:background="@color/material_brown_500"
             android:onClick="submitOrder"
-            android:text="@string/order" />
+            android:text="@string/order"
+            android:textColor="@android:color/white" />
     </LinearLayout>
 </ScrollView>
 

@@ -16,7 +16,7 @@
     <string name="initial_quantity_value" translatable="false">2</string>
     <string name="maximum_coffes">Pode pedir um máximo de 100 cafés !</string>
 
-    <string name="name_error">Por favor digite o seu nome</string>
+    <string name="name_error">Por favor digite o seu nome !!</string>
     <string name="IntegralEmailAddress" translatable="false">algarvi0@gmail.com</string>
     <!--
       Name for the order summary. It will be shown in the format of "Name: Amy" where Amy is the
@@ -29,6 +29,8 @@
       "Add whipped cream? true" or "Add whipped cream? false". [CHAR LIMIT=NONE]
     -->
     <string name="order_summary_whipped_cream">Adicionar Natas? <xliff:g id="stringAddChocolate" example="true">%s</xliff:g></string>
+    <string name="send_mail_using">Enviar mail utilizando...</string>
+    <string name="logo">Logo</string>
 
     <!--
       Chocolate topping for the order summary. It will be shown in the format of
@@ -61,6 +63,9 @@
     <string name="order">Pedido</string>
     <string name="minus">-</string>
     <string name="_0">0</string>
+
+    <string name="no_mail_clients">Não existem clientes de mail instalados !</string>
+
 
     <string name="no">Não</string>
     <string name="yes">Sim</string>

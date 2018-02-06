@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-        <dimen name="default_margin">16dp</dimen>
-        <dimen name="default_padding">8dp</dimen>
+    <dimen name="default_margin">8dp</dimen>
+
+    <dimen name="default_padding">8dp</dimen>
         <dimen name="default_padding_small">5dp</dimen>
+
         <dimen name="text_size">25sp</dimen>
-        <dimen name="top_bottom_margin">32dp</dimen>
-        <dimen name="AnswerFontSize">18sp</dimen>
+
+    <dimen name="top_bottom_margin">32dp</dimen>
+
+    <dimen name="AnswerFontSize">18sp</dimen>
         <dimen name="EditTextSize">16sp</dimen>
+
         <dimen name="image_height250">250dp</dimen>
-        <dimen name="image_height300">300dp</dimen>
+
+    <dimen name="image_height300">300dp</dimen>
+
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
@@ -59,7 +66,6 @@
     <dimen name="icon_width_height">30dp</dimen>
 
     <!-- Default screen margins, per the Android Design guidelines. -->
-
     <dimen name="card_height">304dp</dimen>
     <dimen name="md_keylines">16dp</dimen>
     <dimen name="tile_padding">8dp</dimen>
@@ -75,11 +81,8 @@
     <dimen name="card_image_height">200dp</dimen>
     <dimen name="list_body">14sp</dimen>
     <dimen name="navheader_height">222dp</dimen>
-
-
         <!-- Default colors and dimens per Material Design guidelines (Last update: May 2016 release) -->
-        <!-- Style -->
-
+    <!-- Style -->
         <!-- Typography -->
         <dimen name="material_typography_button">15sp</dimen>
         <dimen name="material_typography_caption">13sp</dimen>
@@ -92,9 +95,7 @@
         <dimen name="material_typography_display2">45sp</dimen>
         <dimen name="material_typography_display3">56sp</dimen>
         <dimen name="material_typography_display4">112sp</dimen>
-
         <!-- Layout -->
-
         <!-- Metrics & Keylines -->
         <!-- https://www.google.com/design/spec/layout/metrics-keylines.html#metrics-keylines-keylines-spacing -->
         <dimen name="material_layout_keylines_screen_edge_margin">16dp</dimen>
